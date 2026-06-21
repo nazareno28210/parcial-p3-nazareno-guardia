@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feria Digital - Iniciar Sesión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <!-- FORMULARIO DE REGISTRO -->
+<div class="registro-container">
+  <h2>Registrarse</h2>
+  <form id="formRegistro">
+    <input type="text" id="nombre-registro" placeholder="Nombre" required>
+    <input type="text" id="apellido-registro" placeholder="apellido" required>
+    <input type="email" id="email-registro" placeholder="Email" required>
+    <input type="date" id="fechaDeNacimiento-registro" placeholder="fecha de nacimiento" required>
+
+    <input type="password" id="password-registro" placeholder="Contraseña" required>
+    <input type="password" id="password-confirmation-registro" placeholder="confirmar Contraseña" required>
+    <label>
+        <input type="checkbox" id="terminos" >Acepto los términos y condiciones
+        
+    </label>
+    <button type="submit">Registrarse</button>
+  </form>
+  <div id="mensaje-registro"></div>
+</div>
+
+ <!-- FORMULARIO DE LOGIN -->
+
+<div class="login-container">
+  <h2>Iniciar sesion</h2>
+  <form id="formLogin">
+    <input type="email" id="email-login" placeholder="Email" required>
+    <input type="password" id="password-login" placeholder="Contraseña" required>
+     <button type="submit">Iniciar sesion</button>
+  </form>
+    <div id="mensaje-login"></div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
