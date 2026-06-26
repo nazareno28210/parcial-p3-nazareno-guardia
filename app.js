@@ -260,3 +260,23 @@ formLogin.addEventListener("submit", async function (e) {
 
     formLogin.reset();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Revisamos si ya existe la clave 'usuarios' en el localStorage
+    let usuariosGuardados = localStorage.getItem('usuarios');
+
+    // 2. Si no existe (es null), inyectamos nuestro usuario de prueba
+    if (!usuariosGuardados) {
+        const usuarioDePrueba = {
+            nombre: "Nazareno",
+            apellido: "Guardia", // Agrega los campos que pida tu registro
+            email: "naza@gmail.com",
+            password: "G.naza123",
+            fechaNacimiento: "2000-01-01", // Una fecha que sea mayor de 18 años
+            terminos: true
+        };
+
+        // Creamos un array con ese usuario, lo pasamos a texto y lo guardamos
+        localStorage.setItem('usuarios', JSON.stringify([usuarioDePrueba]));
+    }
+});
